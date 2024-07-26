@@ -138,7 +138,7 @@ const buildURLSuffix = (params, version = 0) => {
   }
 
   // The URL param key should match the name of the store, as specified as in storageOptions above
-  searchParams.set('fishAndBearsStore', JSON.stringify(zustandStoreParams))
+  searchParams.set('fishAndBearsStore', JSON.stringify(JSON.stringify(zustandStoreParams)))
   return searchParams.toString()
 }
 
